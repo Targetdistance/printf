@@ -11,7 +11,6 @@ int _printf(const char *format, ...)
 	int i, j, n_characters;
 	char *str;
 	i = 0;
-	j = 0;
 	n_characters = 0;
 
 	va_start(a, format);
@@ -36,6 +35,7 @@ int _printf(const char *format, ...)
 			{
 				i++;
 				str = (va_arg(a, char *));
+				j = 0;
 				while (str[j] != '\0')
 				{
 					_putchar(str[j]);
