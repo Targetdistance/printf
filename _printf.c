@@ -7,13 +7,11 @@
  */
 int _printf(const char *format, ...)
 {
+	va_list a;
 	int i, j, n_characters;
 	char *str;
-
 	i = 0;
 	n_characters = 0;
-
-	va_list a;
 
 	va_start(a, format);
 
