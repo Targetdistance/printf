@@ -2,7 +2,10 @@
 
 int main(void)
 {
-	_printf("hello bitches\n");
-	printf("normal printf sucks\n");
+	char y = 'a';
+	char ts[6] = "print";
+
+	_printf("Let's try to %s %c simple sentence\n", ts, y);
+	printf("Let's try to %s %c simple sentence\n", ts, y);
 	return (0);
 }
