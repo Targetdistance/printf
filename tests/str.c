@@ -2,10 +2,12 @@
 
 int main(void)
 {
-	char y = 'a';
-	char ts[6] = "print";
+	int n, a;
 
-	_printf("Let's try to %s %c simple sentence\n", ts, y);
-	printf("Let's try to %s %c simple sentence\n", ts, y);
+	n = _printf("trash%%\n");
+	printf("n = %d\n", n);
+	a = printf("trash%%\n");
+	printf("a = %d\n", a);
+
 	return (0);
 }

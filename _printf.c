@@ -3,18 +3,20 @@
 /**
  * _printf - writes to standard output.
  * @format: a string
- * Return: n_characters
+ * Return: number of characters
  */
 int _printf(const char *format, ...)
 {
 	int i, j, n_characters;
 	char *str;
+
 	i = 0;
 	n_characters = 0;
 
 	va_list a;
 
 	va_start(a, format);
+
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%')
@@ -22,7 +24,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			n_characters += 1;
 		}
-		else 
+		else
 		{
 			if (format[i + 1] == 'c')
 			{
@@ -30,7 +32,7 @@ int _printf(const char *format, ...)
 				n_characters += 1;
 				i++;
 			}
-		
+
 			else if (format[i + 1] == 's')
 			{
 				i++;
@@ -43,10 +45,17 @@ int _printf(const char *format, ...)
 					j++;
 				}
 			}
+
+			else if (format[i + 1] == '%')
+			{
+				i++;
+				_putchar('%');
+				n_characters += 1;
+			}
 		}
 		i++;
 	}
 	va_end(a);
 
-	return(n_characters);
+	return (n_characters);
 }
