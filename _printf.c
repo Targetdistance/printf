@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	va_list a;
 	int i, j, n_characters;
-	char *str = NULL;
+	char *str;
 	i = 0;
 	j = 0;
 	n_characters = 0;
