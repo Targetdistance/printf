@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	char *str = NULL;
 	i = 0;
 	j = 0;
-	n_characters = -1;
+	n_characters = 0;
 
 	va_start(a, format);
 
